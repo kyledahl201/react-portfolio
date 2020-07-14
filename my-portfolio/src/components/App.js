@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { about } from './../constants/About'
 import { skills } from './../constants/Skills'
 import { Portfolio } from "./Portfolio/Portfolio";
+import { projects } from './../constants/Projects';
+
 import "./App.css";
 
 export class App extends Component {
@@ -14,18 +16,20 @@ export class App extends Component {
       selectedQuote: "",
       about: null,
       skills: null,
+      projects: null
     };
   }
 
-  componentDidMount () {
-      this.setState({
-          selectedSection: "about",
-          about, skills,
-          selectedHeading: about.heading,
-          selectedQuote: about.quote
-      })
-  }
-
+  componentWillMount () {
+		this.setState ({ 
+			about,
+			skills,
+			projects,
+			selectedHeading: about.heading,
+			selectedQuote: about.quote,
+			selectedSection: "about" 
+		});
+	}
   handleSectionClick = (sectionName) => {
 	  this.setState({
       selectedSection: sectionName,
