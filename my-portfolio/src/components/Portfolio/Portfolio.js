@@ -4,7 +4,14 @@ import './portfolio.css'
 import { SideNav } from './../SideNav/SideNav';
 import { SectionContainer } from './../SectionContainer/SectionContainer'
 
-export const Portfolio = ({ handleSectionClick, about, skills, selectedHeading, selectedQuote, selectedSection }) => {
+export const Portfolio = ({ 
+    handleSectionClick, 
+    about, 
+    skills, 
+    projects,
+    selectedHeading, 
+    selectedQuote, 
+    selectedSection }) => {
     return (
         <div className="portfolio-container">
             <div className="sidenav-container">
@@ -17,7 +24,8 @@ export const Portfolio = ({ handleSectionClick, about, skills, selectedHeading, 
 				skills={skills}
 				selectedHeading={selectedHeading}
 				selectedSection={selectedSection}
-				selectedQuote={selectedQuote} />
+                selectedQuote={selectedQuote}
+                projects={projects} />
             </div>
         </div>
     )

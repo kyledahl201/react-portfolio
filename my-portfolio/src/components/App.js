@@ -43,7 +43,8 @@ export class App extends Component {
       <div className="App">
 			<Portfolio
 				about={this.state.about}
-				skills={this.state.skills}
+        skills={this.state.skills}
+        projects={this.state.projects}
 				selectedHeading={this.state.selectedHeading}
 				selectedSection={this.state.selectedSection}
 				selectedQuote={this.state.selectedQuote}
