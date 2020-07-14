@@ -2,6 +2,7 @@ import React from 'react';
 
 import './portfolio.css'
 import { SideNav } from './../SideNav/SideNav';
+import { SectionContainer } from './../SectionContainer/SectionContainer'
 
 export const Portfolio = ({ handleSectionClick }) => {
     return (
@@ -11,7 +12,7 @@ export const Portfolio = ({ handleSectionClick }) => {
                 handleSectionClick={handleSectionClick} />
             </div>
             <div className="main-section-container">
-                <h1>Main Section</h1>
+                <SectionContainer />
             </div>
         </div>
     )
