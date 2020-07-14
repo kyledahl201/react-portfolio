@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import { Portfolio } from "./Portfolio/Portfolio";
 
 export class App extends Component {
   constructor() {
@@ -13,9 +14,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        	<p>
-				Hello World
-			</p>
+        	<Portfolio />
       </div>
     );
   }
