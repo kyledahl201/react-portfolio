@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { About } from './../About/About'
+import { About } from './../About/About';
+import { Skills } from './../Skills/Skills';
 import './section-container.css';
 
 export const SectionContainer = (props) => {
@@ -11,7 +12,7 @@ export const SectionContainer = (props) => {
                 <p className="main-quote">"Pick a flower on Earth and you move the farthest star."</p>
             </div>
             <div className="section-component">
-                <About />
+                <Skills />
             </div>
         </div>
     )
