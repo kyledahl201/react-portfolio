@@ -23,12 +23,15 @@ export class App extends Component {
           about, skills,
           selectedHeading: about.heading,
           selectedQuote: about.quote
-
       })
   }
 
   handleSectionClick = (sectionName) => {
-	  alert(sectionName)
+	  this.setState({
+      selectedSection: sectionName,
+      selectedHeading: this.state[sectionName].heading,
+      selectedQuote: this.state[sectionName].quote
+  })
   }
 
   render() {

@@ -13,7 +13,7 @@ export const Skills = (props) => {
             <h3>Industry Knowledge</h3>
             <div className="industry-skill-container">
                 {
-                    skills.industryKnowledge.map (skill => <SkillCard skill={skill} />)
+                    skills.industryKnowledge.map (skill => <SkillCard key={skill} skill={skill} />)
                 }
             </div>
         </div>
