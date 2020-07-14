@@ -4,14 +4,17 @@ import { skills } from './../../constants/Skills';
 
 
 import './skills.css';
-import { SkillCard } from '../SkillCard/SkillCard';
 
-export const Skills = ({ skills }) => {
+import { SkillCard } from './../SkillCard/SkillCard';
+
+export const Skills = (props) => {
     return (
         <div className="skills-container">
             <h3>Industry Knowledge</h3>
             <div className="industry-skill-container">
-                <SkillCard skill="Software" />
+                {
+                    skills.industryKnowledge.map (skill => <SkillCard skill={skill} />)
+                }
             </div>
         </div>
     )
