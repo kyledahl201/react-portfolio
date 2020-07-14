@@ -4,7 +4,7 @@ import './portfolio.css'
 import { SideNav } from './../SideNav/SideNav';
 import { SectionContainer } from './../SectionContainer/SectionContainer'
 
-export const Portfolio = ({ handleSectionClick }) => {
+export const Portfolio = ({ handleSectionClick, about, skills, selectedHeading, selectedQuote, selectedSection }) => {
     return (
         <div className="portfolio-container">
             <div className="sidenav-container">
@@ -12,7 +12,12 @@ export const Portfolio = ({ handleSectionClick }) => {
                 handleSectionClick={handleSectionClick} />
             </div>
             <div className="main-section-container">
-                <SectionContainer />
+                <SectionContainer 
+                about={about}
+				skills={skills}
+				selectedHeading={selectedHeading}
+				selectedSection={selectedSection}
+				selectedQuote={selectedQuote} />
             </div>
         </div>
     )

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import "./App.css";
+import { about } from './../constants/About'
+import { skills } from './../constants/Skills'
 import { Portfolio } from "./Portfolio/Portfolio";
+import "./App.css";
 
 export class App extends Component {
   constructor() {
@@ -8,7 +10,21 @@ export class App extends Component {
 
     this.state = {
       selectedSection: "",
+      selectedHeading: "",
+      selectedQuote: "",
+      about: null,
+      skills: null,
     };
+  }
+
+  componentDidMount () {
+      this.setState({
+          selectedSection: "about",
+          about, skills,
+          selectedHeading: about.heading,
+          selectedQuote: about.quote
+
+      })
   }
 
   handleSectionClick = (sectionName) => {
@@ -19,7 +35,11 @@ export class App extends Component {
     return (
       <div className="App">
 			<Portfolio
-				hello="Hello I need a job"
+				about={this.state.about}
+				skills={this.state.skills}
+				selectedHeading={this.state.selectedHeading}
+				selectedSection={this.state.selectedSection}
+				selectedQuote={this.state.selectedQuote}
 				handleSectionClick={this.handleSectionClick} />
       </div>
     );
