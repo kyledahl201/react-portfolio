@@ -11,10 +11,16 @@ export class App extends Component {
     };
   }
 
+  handleSectionClick = (sectionName) => {
+	  alert(sectionName)
+  }
+
   render() {
     return (
       <div className="App">
-        	<Portfolio />
+			<Portfolio
+				hello="Hello I need a job"
+				handleSectionClick={this.handleSectionClick} />
       </div>
     );
   }
