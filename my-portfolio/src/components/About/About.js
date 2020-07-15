@@ -7,6 +7,9 @@ export const About = (props) => {
     return (
         <div className="about-container">
             {about.bio}
+            <br></br>
+            <br></br>
+            {about.bio2}
         </div>
     )
 }
